@@ -40,13 +40,13 @@ namespace TaxAdministration.form
             this.labelLogin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxOldPassword = new System.Windows.Forms.TextBox();
-            this.textBoxNewPassword = new System.Windows.Forms.TextBox();
-            this.textBoxNewPassword2 = new System.Windows.Forms.TextBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
+            this.textBoxNewPassword2 = new System.Windows.Forms.TextBox();
+            this.textBoxNewPassword = new System.Windows.Forms.TextBox();
+            this.textBoxOldPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,25 +166,42 @@ namespace TaxAdministration.form
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Смена пароля";
             // 
-            // label2
+            // buttonChangePassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Старый пароль";
+            this.buttonChangePassword.Location = new System.Drawing.Point(98, 135);
+            this.buttonChangePassword.Name = "buttonChangePassword";
+            this.buttonChangePassword.Size = new System.Drawing.Size(138, 25);
+            this.buttonChangePassword.TabIndex = 6;
+            this.buttonChangePassword.Text = "Изменить";
+            this.buttonChangePassword.UseVisualStyleBackColor = true;
+            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 
-            // label3
+            // textBoxNewPassword2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Новый пароль";
+            this.textBoxNewPassword2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNewPassword2.Location = new System.Drawing.Point(155, 98);
+            this.textBoxNewPassword2.Name = "textBoxNewPassword2";
+            this.textBoxNewPassword2.PasswordChar = '♥';
+            this.textBoxNewPassword2.Size = new System.Drawing.Size(175, 31);
+            this.textBoxNewPassword2.TabIndex = 5;
+            // 
+            // textBoxNewPassword
+            // 
+            this.textBoxNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNewPassword.Location = new System.Drawing.Point(155, 61);
+            this.textBoxNewPassword.Name = "textBoxNewPassword";
+            this.textBoxNewPassword.PasswordChar = '♥';
+            this.textBoxNewPassword.Size = new System.Drawing.Size(175, 31);
+            this.textBoxNewPassword.TabIndex = 4;
+            // 
+            // textBoxOldPassword
+            // 
+            this.textBoxOldPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOldPassword.Location = new System.Drawing.Point(155, 24);
+            this.textBoxOldPassword.Name = "textBoxOldPassword";
+            this.textBoxOldPassword.PasswordChar = '♥';
+            this.textBoxOldPassword.Size = new System.Drawing.Size(175, 31);
+            this.textBoxOldPassword.TabIndex = 3;
             // 
             // label5
             // 
@@ -196,42 +213,25 @@ namespace TaxAdministration.form
             this.label5.TabIndex = 2;
             this.label5.Text = "Подтверждение";
             // 
-            // textBoxOldPassword
+            // label3
             // 
-            this.textBoxOldPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOldPassword.Location = new System.Drawing.Point(155, 24);
-            this.textBoxOldPassword.Name = "textBoxOldPassword";
-            this.textBoxOldPassword.PasswordChar = '♥';
-            this.textBoxOldPassword.Size = new System.Drawing.Size(175, 31);
-            this.textBoxOldPassword.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Новый пароль";
             // 
-            // textBoxNewPassword
+            // label2
             // 
-            this.textBoxNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNewPassword.Location = new System.Drawing.Point(155, 61);
-            this.textBoxNewPassword.Name = "textBoxNewPassword";
-            this.textBoxNewPassword.PasswordChar = '♥';
-            this.textBoxNewPassword.Size = new System.Drawing.Size(175, 31);
-            this.textBoxNewPassword.TabIndex = 4;
-            // 
-            // textBoxNewPassword2
-            // 
-            this.textBoxNewPassword2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNewPassword2.Location = new System.Drawing.Point(155, 98);
-            this.textBoxNewPassword2.Name = "textBoxNewPassword2";
-            this.textBoxNewPassword2.PasswordChar = '♥';
-            this.textBoxNewPassword2.Size = new System.Drawing.Size(175, 31);
-            this.textBoxNewPassword2.TabIndex = 5;
-            // 
-            // buttonChangePassword
-            // 
-            this.buttonChangePassword.Location = new System.Drawing.Point(98, 135);
-            this.buttonChangePassword.Name = "buttonChangePassword";
-            this.buttonChangePassword.Size = new System.Drawing.Size(138, 25);
-            this.buttonChangePassword.TabIndex = 6;
-            this.buttonChangePassword.Text = "Изменить";
-            this.buttonChangePassword.UseVisualStyleBackColor = true;
-            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Старый пароль";
             // 
             // FormProfile
             // 
@@ -250,6 +250,7 @@ namespace TaxAdministration.form
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.label1);
             this.Name = "FormProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProfile";
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.groupBox1.ResumeLayout(false);

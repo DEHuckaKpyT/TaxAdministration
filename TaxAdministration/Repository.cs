@@ -54,19 +54,22 @@ namespace TaxAdministration
             return items;
         }
 
-        public static void Post(string query)
+        public static int Post(string query)
         {
+            int affectedRows = 0;
             SqlCommand command = connection.CreateCommand();
             try
             {
                 command.CommandText = query;//"insert into organization (id, name, inn, phone_number) values (1, 'asd', '123', '1233');";
-                command.ExecuteNonQuery();
+                affectedRows = command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 MessageBox.Show(ex.Message);
             }
+
+            return affectedRows;
         }
 
         static List<T> Fill<T>(this SqlDataReader reader) where T : new()

@@ -141,6 +141,7 @@ namespace TaxAdministration.form
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "FormAddRole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddRole";
             this.ResumeLayout(false);
             this.PerformLayout();

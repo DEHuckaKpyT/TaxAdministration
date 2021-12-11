@@ -43,6 +43,7 @@ namespace TaxAdministration.form
             this.labelChange = new System.Windows.Forms.Label();
             this.labelUsers = new System.Windows.Forms.Label();
             this.buttonAddRole = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -182,11 +183,23 @@ namespace TaxAdministration.form
             this.buttonAddRole.UseVisualStyleBackColor = true;
             this.buttonAddRole.Click += new System.EventHandler(this.buttonAddRole_Click);
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSave.Location = new System.Drawing.Point(176, 354);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(130, 44);
+            this.buttonSave.TabIndex = 17;
+            this.buttonSave.Text = "Изменить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 365);
+            this.ClientSize = new System.Drawing.Size(483, 410);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAddRole);
             this.Controls.Add(this.labelUsers);
             this.Controls.Add(this.labelChange);
@@ -202,6 +215,7 @@ namespace TaxAdministration.form
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.label1);
             this.Name = "FormUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUser";
             this.Load += new System.EventHandler(this.FormUser_Load);
             this.ResumeLayout(false);
@@ -225,5 +239,6 @@ namespace TaxAdministration.form
         private System.Windows.Forms.Label labelChange;
         private System.Windows.Forms.Label labelUsers;
         private System.Windows.Forms.Button buttonAddRole;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

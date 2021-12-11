@@ -102,6 +102,7 @@ namespace TaxAdministration.form
             this.ClientSize = new System.Drawing.Size(1217, 775);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.toolStrip1.ResumeLayout(false);

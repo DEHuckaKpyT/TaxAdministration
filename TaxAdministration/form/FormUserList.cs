@@ -23,8 +23,11 @@ namespace TaxAdministration.form
             dataGridViewUsers.DataSource = Repository.Get<UsersWithRoles>($"select * from V_UsersWithRoles");
             dataGridViewUsers.Columns.Add(new DataGridViewButtonColumn()
             {
-                Text = "Открвыть",
+                Text = "Открыть",
+                UseColumnTextForButtonValue = true
             });
+            dataGridViewUsers.Width = dataGridViewUsers.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
+            Width = dataGridViewUsers.Width + 35;
         }
 
         private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,7 +40,30 @@ namespace TaxAdministration.form
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
                 UsersWithRoles user = (UsersWithRoles)grid.Rows[e.RowIndex].DataBoundItem;
-                new FormUser(user.login).Show();
+                new FormUser(user.login).ShowDialog();
+                dataGridViewUsers.DataSource = Repository.Get<UsersWithRoles>($"select * from V_UsersWithRoles");
+            }
+        }
+
+        private void buttonAddUser_Click(object sender, EventArgs e)
+        {
+            new FormAddUser().ShowDialog();
+            dataGridViewUsers.DataSource = Repository.Get<UsersWithRoles>($"select * from V_UsersWithRoles");
+        }
+
+        private void buttonDeleteUser_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow row in dataGridViewUsers.SelectedRows)
+            {
+                UsersWithRoles user = ((UsersWithRoles)row.DataBoundItem);
+                if (MessageBox.Show($"Действительно хотите удалить \"{user.login}\"?", "", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    if (Repository.Post($"delete from [user] where login = '{user.login}'") == 1)
+                    {
+                        MessageBox.Show($"Пользователь {user.login} удалён.");
+                        dataGridViewUsers.DataSource = Repository.Get<UsersWithRoles>($"select * from V_UsersWithRoles");
+                    }
+                    else
+                        return;
             }
         }
     }
