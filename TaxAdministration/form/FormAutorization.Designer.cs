@@ -41,7 +41,7 @@ namespace TaxAdministration
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPassword.Location = new System.Drawing.Point(121, 118);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = 'O';
+            this.textBoxPassword.PasswordChar = '♥';
             this.textBoxPassword.Size = new System.Drawing.Size(209, 35);
             this.textBoxPassword.TabIndex = 1;
             this.textBoxPassword.Text = "12";

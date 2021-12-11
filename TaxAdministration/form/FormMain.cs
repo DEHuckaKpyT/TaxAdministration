@@ -24,5 +24,10 @@ namespace TaxAdministration.form
         private void ToolStripMenuItemExit_Click(object sender, EventArgs e) => Application.Restart();
 
         private void ToolStripMenuItemShow_Click(object sender, EventArgs e) => new FormProfile(userId).Show();
+
+        private void ToolStripMenuItemUserList_Click(object sender, EventArgs e)
+        {
+            new FormUserList().Show();
+        }
     }
 }
