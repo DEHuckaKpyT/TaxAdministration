@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
@@ -11,7 +12,7 @@ namespace TaxAdministration
 {
     static class Repository
     {
-        static SqlConnection connection;
+        public static SqlConnection connection;
 
         public static void Connect()
         {
@@ -90,10 +91,10 @@ namespace TaxAdministration
                             var value = reader.GetValue(inc);
                             if (value != DBNull.Value)
                             {
-                                prop.SetValue(t, Convert.ChangeType(value, prop.PropertyType), null);
+                                Type ty = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                                object safeValue = (value == null) ? null : Convert.ChangeType(value, ty);
+                                prop.SetValue(t, safeValue, null);
                             }
-                            //prop.SetValue(t, value, null);
-
                         }
                     }
                 }
@@ -102,6 +103,28 @@ namespace TaxAdministration
             reader.Close();
 
             return res;
+        }
+
+        public static List<T> Execute<T>(string name,
+            string paramName1, object o1,
+            string paramName2, object o2,
+            string paramName3, object o3
+            ) where T : new()
+        {
+            List<T> items = null;
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = name;
+            command.Parameters.AddWithValue(paramName1, o1);
+            command.Parameters.AddWithValue(paramName2, o2);
+            command.Parameters.AddWithValue(paramName3, o3);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+
+            items = Fill<T>(sqlDataReader);
+
+            sqlDataReader.Close();
+
+            return items;
         }
     }
 }

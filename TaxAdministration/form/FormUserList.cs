@@ -20,6 +20,7 @@ namespace TaxAdministration.form
 
         private void FormUserList_Load(object sender, EventArgs e)
         {
+            //note V_UsersWithRoles
             dataGridViewUsers.DataSource = Repository.Get<UsersWithRoles>($"select * from V_UsersWithRoles");
             dataGridViewUsers.Columns.Add(new DataGridViewButtonColumn()
             {

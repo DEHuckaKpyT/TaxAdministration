@@ -25,9 +25,16 @@ namespace TaxAdministration.form
 
         private void ToolStripMenuItemShow_Click(object sender, EventArgs e) => new FormProfile(userId).Show();
 
-        private void ToolStripMenuItemUserList_Click(object sender, EventArgs e)
-        {
-            new FormUserList().Show();
-        }
+        private void ToolStripMenuItemUserList_Click(object sender, EventArgs e) => new FormUserList().Show();
+
+        private void ToolStripMenuItemDeclarationList_Click(object sender, EventArgs e) => new FormDeclarationList().Show();
+
+        private void улицыToolStripMenuItem_Click(object sender, EventArgs e) => new FormStreets().Show();
+
+        private void районыToolStripMenuItem_Click(object sender, EventArgs e) => new FormDistricts().Show();
+
+        private void льготыToolStripMenuItem_Click(object sender, EventArgs e) => new FormExempts().Show();
+
+        private void списокОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormOrganizationList().Show();
     }
 }
