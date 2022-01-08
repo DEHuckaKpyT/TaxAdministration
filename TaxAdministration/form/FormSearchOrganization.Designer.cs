@@ -116,6 +116,7 @@ namespace TaxAdministration.form
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormSearchOrganization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchOrganization";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,6 +38,7 @@ namespace TaxAdministration.form
             this.ToolStripMenuItemUserList = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.ToolStripMenuItemDeclarationList = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискДекларацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.улицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.районыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,9 @@ namespace TaxAdministration.form
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.списокОрганизацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискОрганизацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискДекларацийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.списокНалогоплательщиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискНалогоплательщикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +60,8 @@ namespace TaxAdministration.form
             this.toolStripDropDownButtonUsers,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
-            this.toolStripDropDownButton3});
+            this.toolStripDropDownButton3,
+            this.toolStripDropDownButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1217, 25);
@@ -127,6 +131,12 @@ namespace TaxAdministration.form
             this.ToolStripMenuItemDeclarationList.Text = "Список деклараций";
             this.ToolStripMenuItemDeclarationList.Click += new System.EventHandler(this.ToolStripMenuItemDeclarationList_Click);
             // 
+            // поискДекларацийToolStripMenuItem
+            // 
+            this.поискДекларацийToolStripMenuItem.Name = "поискДекларацийToolStripMenuItem";
+            this.поискДекларацийToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.поискДекларацийToolStripMenuItem.Text = "Поиск декларации";
+            // 
             // toolStripDropDownButton2
             // 
             this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -143,21 +153,21 @@ namespace TaxAdministration.form
             // улицыToolStripMenuItem
             // 
             this.улицыToolStripMenuItem.Name = "улицыToolStripMenuItem";
-            this.улицыToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.улицыToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.улицыToolStripMenuItem.Text = "Улицы";
             this.улицыToolStripMenuItem.Click += new System.EventHandler(this.улицыToolStripMenuItem_Click);
             // 
             // районыToolStripMenuItem
             // 
             this.районыToolStripMenuItem.Name = "районыToolStripMenuItem";
-            this.районыToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.районыToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.районыToolStripMenuItem.Text = "Районы";
             this.районыToolStripMenuItem.Click += new System.EventHandler(this.районыToolStripMenuItem_Click);
             // 
             // льготыToolStripMenuItem
             // 
             this.льготыToolStripMenuItem.Name = "льготыToolStripMenuItem";
-            this.льготыToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.льготыToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.льготыToolStripMenuItem.Text = "Льготы";
             this.льготыToolStripMenuItem.Click += new System.EventHandler(this.льготыToolStripMenuItem_Click);
             // 
@@ -185,12 +195,33 @@ namespace TaxAdministration.form
             this.поискОрганизацийToolStripMenuItem.Name = "поискОрганизацийToolStripMenuItem";
             this.поискОрганизацийToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.поискОрганизацийToolStripMenuItem.Text = "Поиск организации";
+            this.поискОрганизацийToolStripMenuItem.Click += new System.EventHandler(this.поискОрганизацийToolStripMenuItem_Click);
             // 
-            // поискДекларацийToolStripMenuItem
+            // toolStripDropDownButton4
             // 
-            this.поискДекларацийToolStripMenuItem.Name = "поискДекларацийToolStripMenuItem";
-            this.поискДекларацийToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
-            this.поискДекларацийToolStripMenuItem.Text = "Поиск декларации";
+            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.списокНалогоплательщиковToolStripMenuItem,
+            this.поискНалогоплательщикаToolStripMenuItem});
+            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
+            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(144, 22);
+            this.toolStripDropDownButton4.Text = "Налогоплательщики";
+            // 
+            // списокНалогоплательщиковToolStripMenuItem
+            // 
+            this.списокНалогоплательщиковToolStripMenuItem.Name = "списокНалогоплательщиковToolStripMenuItem";
+            this.списокНалогоплательщиковToolStripMenuItem.Size = new System.Drawing.Size(256, 24);
+            this.списокНалогоплательщиковToolStripMenuItem.Text = "Список налогоплательщиков";
+            this.списокНалогоплательщиковToolStripMenuItem.Click += new System.EventHandler(this.списокНалогоплательщиковToolStripMenuItem_Click);
+            // 
+            // поискНалогоплательщикаToolStripMenuItem
+            // 
+            this.поискНалогоплательщикаToolStripMenuItem.Name = "поискНалогоплательщикаToolStripMenuItem";
+            this.поискНалогоплательщикаToolStripMenuItem.Size = new System.Drawing.Size(256, 24);
+            this.поискНалогоплательщикаToolStripMenuItem.Text = "Поиск налогоплательщика";
+            this.поискНалогоплательщикаToolStripMenuItem.Click += new System.EventHandler(this.поискНалогоплательщикаToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -227,5 +258,8 @@ namespace TaxAdministration.form
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem списокОрганизацийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискОрганизацийToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
+        private System.Windows.Forms.ToolStripMenuItem списокНалогоплательщиковToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискНалогоплательщикаToolStripMenuItem;
     }
 }

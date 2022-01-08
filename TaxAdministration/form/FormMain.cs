@@ -36,5 +36,17 @@ namespace TaxAdministration.form
         private void льготыToolStripMenuItem_Click(object sender, EventArgs e) => new FormExempts().Show();
 
         private void списокОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormOrganizationList().Show();
+
+        private void поискОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchOrganization().Show();
+
+        private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
