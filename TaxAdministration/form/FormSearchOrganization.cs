@@ -19,6 +19,7 @@ namespace TaxAdministration.form
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (textBox1.Text != "")
             {
                 Organization organization = Repository.Execute<Organization>("SearchOrganization",
