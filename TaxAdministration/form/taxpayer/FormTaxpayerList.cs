@@ -27,7 +27,7 @@ namespace TaxAdministration.form
                 Text = "Открыть",
                 UseColumnTextForButtonValue = true
             });
-            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns["id"].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -39,10 +39,7 @@ namespace TaxAdministration.form
 
         private void поискОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchOrganization().Show();
 
-        private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e) => new FormTaxpayerList().Show();
 
         private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e)
         {
