@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxAdministration.model;
 
-namespace TaxAdministration.form
+namespace TaxAdministration.form.declaration
 {
-    public partial class FormTaxpayerList : Form
+    public partial class FormNotAcceptedDeclarationList : Form
     {
-        public FormTaxpayerList()
+        public FormNotAcceptedDeclarationList()
         {
             InitializeComponent();
         }
 
-        private void FormTaxpayerList_Load(object sender, EventArgs e)
+        private void FormNotAcceptedDeclarationList_Load(object sender, EventArgs e)
         {
-            //note V_Taxpayers
-            dataGridView1.DataSource = Repository.Get<V_Taxpayers>($"select * from V_Taxpayers");
+            //note V_NotAcceptedDeclarations
+            dataGridView1.DataSource = Repository.Get<V_Declarations>($"select * from V_NotAcceptedDeclarations");
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
             {
                 Text = "Открыть",
@@ -39,16 +39,10 @@ namespace TaxAdministration.form
 
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
-                V_Taxpayers taxpayer = (V_Taxpayers)grid.Rows[e.RowIndex].DataBoundItem;
-                new FormTaxpayer(taxpayer.id).ShowDialog();
-                dataGridView1.DataSource = Repository.Get<V_Taxpayers>($"select * from V_Taxpayers");
+                V_Declarations declaration = (V_Declarations)grid.Rows[e.RowIndex].DataBoundItem;
+                new FormDeclaration(declaration.id).ShowDialog();
+                dataGridView1.DataSource = Repository.Get<V_Declarations>($"select * from V_NotAcceptedDeclarations");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new FormAddTaxpayer().ShowDialog();
-            dataGridView1.DataSource = Repository.Get<V_Taxpayers>($"select * from V_Taxpayers");
         }
     }
 }

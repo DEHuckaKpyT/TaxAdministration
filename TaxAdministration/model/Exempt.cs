@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TaxAdministration.model
 {
-    class District
+    class Exempt
     {
         public int id { get; set; }
-        public string district { get; set; }
+        public string name { get; set; }
 
         public override string ToString()
         {
-            return $"{district}";
+            return $"{name}";
         }
     }
 }

@@ -126,5 +126,31 @@ namespace TaxAdministration
 
             return items;
         }
+
+        public static List<T> Execute<T>(string name,
+            string paramName1, object o1,
+            string paramName2, object o2,
+            string paramName3, object o3,
+            string paramName4, object o4,
+            string paramName5, object o5
+            ) where T : new()
+        {
+            List<T> items = null;
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = name;
+            command.Parameters.AddWithValue(paramName1, o1);
+            command.Parameters.AddWithValue(paramName2, o2);
+            command.Parameters.AddWithValue(paramName3, o3);
+            command.Parameters.AddWithValue(paramName4, o4);
+            command.Parameters.AddWithValue(paramName5, o5);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+
+            items = Fill<T>(sqlDataReader);
+
+            sqlDataReader.Close();
+
+            return items;
+        }
     }
 }

@@ -66,7 +66,45 @@ namespace TaxAdministration.form
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string query = "update taxpayer set ";
 
+            if (textBoxFirstName.Text != "")
+                query += $"firstname = '{textBoxFirstName.Text}', ";
+            if (textBoxMiddleName.Text != "")
+                query += $"middlename = '{textBoxMiddleName.Text}', ";
+            if (textBoxDocument.Text != "")
+                query += $"document = '{textBoxDocument.Text}', ";
+            if (textBoxSerial.Text != "")
+                query += $"document_serial = '{textBoxSerial.Text}', ";
+            if (textBoxNumber.Text != "")
+                query += $"document_number = '{textBoxNumber.Text}', ";
+            if (dateTimePickerDate.Text != "")
+                query += $"document_date = '{dateTimePickerDate.Value.ToString("yyyy-MM-dd")}', ";
+            if (textBoxWhere.Text != "")
+                query += $"document_region = '{textBoxWhere.Text}', ";
+            if (dateTimePickerBorn.Text != "")
+                query += $"born = '{dateTimePickerBorn.Value.ToString("yyyy-MM-dd")}', ";
+
+            if (comboBoxOrganization.Text != "")
+                query += $"organization_id = {((Organization)comboBoxOrganization.SelectedItem).id}, ";
+
+            if (comboBoxStreet.Text != "")
+                query += $"street_id = {((Street)comboBoxStreet.SelectedItem).id}, ";
+
+            if (comboBoxDistrict.Text != "")
+                query += $"district_id = {((District)comboBoxDistrict.SelectedItem).id}, ";
+
+            if (textBoxTaxDistrict.Text != "")
+                query += $"tax_district = '{textBoxTaxDistrict.Text}', ";
+            if (textBoxTaxNumber.Text != "")
+                query += $"tax_number = '{textBoxTaxNumber.Text}', ";
+
+            query += $"inn = '{textBoxInn.Text}', ";
+            query += $"lastname = '{textBoxLastname.Text}' ";
+
+            query += $"where id = {id}";
+
+            Repository.Post(query);
         }
     }
 }

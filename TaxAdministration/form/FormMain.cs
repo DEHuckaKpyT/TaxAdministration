@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaxAdministration.form.declaration;
+using TaxAdministration.form.taxpayer;
 
 namespace TaxAdministration.form
 {
@@ -27,7 +29,7 @@ namespace TaxAdministration.form
 
         private void ToolStripMenuItemUserList_Click(object sender, EventArgs e) => new FormUserList().Show();
 
-        private void ToolStripMenuItemDeclarationList_Click(object sender, EventArgs e) => new FormDeclarationList().Show();
+        private void ToolStripMenuItemDeclarationList_Click(object sender, EventArgs e) => new FormNotAcceptedDeclarationList().Show();
 
         private void улицыToolStripMenuItem_Click(object sender, EventArgs e) => new FormStreets().Show();
 
@@ -41,9 +43,10 @@ namespace TaxAdministration.form
 
         private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e) => new FormTaxpayerList().Show();
 
-        private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchTaxpayer().Show();
 
-        }
+        private void поискДекларацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchDeclaration().Show();
+
+        private void всеДекларацииToolStripMenuItem_Click(object sender, EventArgs e) => new FormDeclarationList().Show();
     }
 }

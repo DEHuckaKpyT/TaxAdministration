@@ -1,7 +1,6 @@
-﻿
-namespace TaxAdministration.form
+﻿namespace TaxAdministration.form.declaration
 {
-    partial class FormDeclarationList
+    partial class FormNotAcceptedDeclarationList
     {
         /// <summary>
         /// Required designer variable.
@@ -35,28 +34,24 @@ namespace TaxAdministration.form
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 11);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(969, 436);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // FormDeclarationList
+            // FormNotAcceptedDeclarationList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 455);
+            this.ClientSize = new System.Drawing.Size(993, 460);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormDeclarationList";
+            this.Name = "FormNotAcceptedDeclarationList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDeclarationList";
-            this.Load += new System.EventHandler(this.FormDeclarationList_Load);
+            this.Text = "FormNotAcceptedDeclarationList";
+            this.Load += new System.EventHandler(this.FormNotAcceptedDeclarationList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

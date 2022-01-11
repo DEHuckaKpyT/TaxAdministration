@@ -53,35 +53,35 @@ namespace TaxAdministration.form
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 30);
+            this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Наименование";
             // 
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxName.Location = new System.Drawing.Point(260, 12);
+            this.textBoxName.Location = new System.Drawing.Point(260, 11);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(363, 35);
+            this.textBoxName.Size = new System.Drawing.Size(363, 32);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxInn
             // 
             this.textBoxInn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxInn.Location = new System.Drawing.Point(260, 53);
+            this.textBoxInn.Location = new System.Drawing.Point(260, 47);
             this.textBoxInn.Name = "textBoxInn";
-            this.textBoxInn.Size = new System.Drawing.Size(363, 35);
+            this.textBoxInn.Size = new System.Drawing.Size(363, 32);
             this.textBoxInn.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 50);
+            this.label2.Location = new System.Drawing.Point(12, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 30);
+            this.label2.Size = new System.Drawing.Size(52, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "ИНН";
             // 
@@ -89,126 +89,126 @@ namespace TaxAdministration.form
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Location = new System.Drawing.Point(12, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 30);
+            this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Адрес";
             // 
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(260, 135);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(260, 119);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(363, 35);
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(363, 32);
             this.textBoxPhoneNumber.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(12, 132);
+            this.label4.Location = new System.Drawing.Point(12, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 30);
+            this.label4.Size = new System.Drawing.Size(158, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Номер телефона";
             // 
             // textBoxFirstname
             // 
             this.textBoxFirstname.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxFirstname.Location = new System.Drawing.Point(260, 176);
+            this.textBoxFirstname.Location = new System.Drawing.Point(260, 155);
             this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(363, 35);
+            this.textBoxFirstname.Size = new System.Drawing.Size(363, 32);
             this.textBoxFirstname.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(12, 173);
+            this.label5.Location = new System.Drawing.Point(12, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 30);
+            this.label5.Size = new System.Drawing.Size(149, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Имя бухгалтера";
             // 
             // textBoxMiddlename
             // 
             this.textBoxMiddlename.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMiddlename.Location = new System.Drawing.Point(260, 217);
+            this.textBoxMiddlename.Location = new System.Drawing.Point(260, 191);
             this.textBoxMiddlename.Name = "textBoxMiddlename";
-            this.textBoxMiddlename.Size = new System.Drawing.Size(363, 35);
+            this.textBoxMiddlename.Size = new System.Drawing.Size(363, 32);
             this.textBoxMiddlename.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(12, 214);
+            this.label6.Location = new System.Drawing.Point(12, 189);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(214, 30);
+            this.label6.Size = new System.Drawing.Size(193, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Отчество бухгалтера";
             // 
             // textBoxLastname
             // 
             this.textBoxLastname.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxLastname.Location = new System.Drawing.Point(260, 258);
+            this.textBoxLastname.Location = new System.Drawing.Point(260, 228);
             this.textBoxLastname.Name = "textBoxLastname";
-            this.textBoxLastname.Size = new System.Drawing.Size(363, 35);
+            this.textBoxLastname.Size = new System.Drawing.Size(363, 32);
             this.textBoxLastname.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 255);
+            this.label7.Location = new System.Drawing.Point(12, 225);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(211, 30);
+            this.label7.Size = new System.Drawing.Size(191, 25);
             this.label7.TabIndex = 12;
             this.label7.Text = "Фамилия бухгалтера";
             // 
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxDescription.Location = new System.Drawing.Point(260, 299);
+            this.textBoxDescription.Location = new System.Drawing.Point(260, 264);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(363, 76);
+            this.textBoxDescription.Size = new System.Drawing.Size(363, 68);
             this.textBoxDescription.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(12, 326);
+            this.label8.Location = new System.Drawing.Point(12, 288);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 30);
+            this.label8.Size = new System.Drawing.Size(99, 25);
             this.label8.TabIndex = 14;
             this.label8.Text = "Описание";
             // 
             // textBoxBuildingNumber
             // 
             this.textBoxBuildingNumber.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxBuildingNumber.Location = new System.Drawing.Point(565, 94);
+            this.textBoxBuildingNumber.Location = new System.Drawing.Point(565, 83);
             this.textBoxBuildingNumber.Name = "textBoxBuildingNumber";
-            this.textBoxBuildingNumber.Size = new System.Drawing.Size(58, 35);
+            this.textBoxBuildingNumber.Size = new System.Drawing.Size(58, 32);
             this.textBoxBuildingNumber.TabIndex = 16;
             // 
             // comboBoxStreet
             // 
             this.comboBoxStreet.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxStreet.FormattingEnabled = true;
-            this.comboBoxStreet.Location = new System.Drawing.Point(260, 91);
+            this.comboBoxStreet.Location = new System.Drawing.Point(260, 83);
             this.comboBoxStreet.Name = "comboBoxStreet";
-            this.comboBoxStreet.Size = new System.Drawing.Size(299, 38);
+            this.comboBoxStreet.Size = new System.Drawing.Size(299, 33);
             this.comboBoxStreet.TabIndex = 17;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(237, 393);
+            this.button1.Location = new System.Drawing.Point(237, 347);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 41);
+            this.button1.Size = new System.Drawing.Size(152, 36);
             this.button1.TabIndex = 18;
             this.button1.Text = "Обновить";
             this.button1.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@ namespace TaxAdministration.form
             // 
             // FormOrganization
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 447);
+            this.ClientSize = new System.Drawing.Size(635, 394);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxStreet);
             this.Controls.Add(this.textBoxBuildingNumber);

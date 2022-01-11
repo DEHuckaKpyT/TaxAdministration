@@ -18,5 +18,9 @@ namespace TaxAdministration
         public string accountant_firstname { get; set; }
         public string accountant_middlename { get; set; }
         public string accountant_lastname { get; set; }
+        public override string ToString()
+        {
+            return $"{name} ({inn})";
+        }
     }
 }
