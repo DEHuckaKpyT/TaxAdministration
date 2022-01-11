@@ -21,7 +21,7 @@ namespace TaxAdministration.form
         {
             if (textBox1.Text != "")
             {
-                Organization organization = Repository.Execute<Organization>("SearchOrganization",
+                Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", textBox1.Text,
                     "@name", DBNull.Value,
                     "@inn", DBNull.Value)[0];
@@ -34,7 +34,7 @@ namespace TaxAdministration.form
             }
             if (textBox2.Text != "")
             {
-                Organization organization = Repository.Execute<Organization>("SearchOrganization",
+                Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", DBNull.Value,
                     "@name", textBox2.Text,
                     "@inn", DBNull.Value)[0];
@@ -47,7 +47,7 @@ namespace TaxAdministration.form
             }
             if (textBox3.Text != "")
             {
-                Organization organization = Repository.Execute<Organization>("SearchOrganization",
+                Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", DBNull.Value,
                     "@name", DBNull.Value,
                     "@inn", textBox3.Text)[0];

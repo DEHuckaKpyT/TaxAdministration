@@ -27,13 +27,15 @@ namespace TaxAdministration
                 User user = users.First();
                 if (user.password == textBoxPassword.Text)
                 {
+                    Repository.Exec("WriteLog", "@description", "Успешный вход", "@userId", user.id);
                     new FormMain(user.id).Show();
                     Hide();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Неверный логин или пароль");
+                else
+                {
+                    Repository.Exec("WriteLog", "@description", $"Попытка входа", "@userId", user.id);
+                    MessageBox.Show("Неверный логин или пароль");
+                }
             }
         }
 

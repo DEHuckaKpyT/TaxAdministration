@@ -9,16 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxAdministration.form.declaration;
 using TaxAdministration.form.taxpayer;
+using TaxAdministration.model;
 
 namespace TaxAdministration.form
 {
     public partial class FormMain : Form
     {
         int userId;
+        bool canChange = false;
         public FormMain(int userId)
         {
             InitializeComponent();
             this.userId = userId;
+        }
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            User user = Repository.Get<User>($"select * from [user] where id = {userId}")[0];
+            Role role = Repository.Get<Role>($"select * from role where id = {user.role_id}")[0];
+
+            toolStripDropDownButtonUsers.Enabled = role.access_users;
+            toolStripButtonLog.Enabled = role.access_log;
+            canChange = role.access_change_infirmation;
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e) => Application.Exit();
@@ -48,5 +59,7 @@ namespace TaxAdministration.form
         private void поискДекларацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchDeclaration().Show();
 
         private void всеДекларацииToolStripMenuItem_Click(object sender, EventArgs e) => new FormDeclarationList().Show();
+
+        private void toolStripButtonLog_Click(object sender, EventArgs e) => new FormLog().Show();
     }
 }
