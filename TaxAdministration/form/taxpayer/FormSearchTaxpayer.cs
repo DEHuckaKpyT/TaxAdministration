@@ -13,9 +13,11 @@ namespace TaxAdministration.form.taxpayer
 {
     public partial class FormSearchTaxpayer : Form
     {
-        public FormSearchTaxpayer()
+        bool canChange;
+        public FormSearchTaxpayer(bool canChange)
         {
             InitializeComponent();
+            this.canChange = canChange;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace TaxAdministration.form.taxpayer
                     "@middlename", DBNull.Value,
                     "@lastname", DBNull.Value)[0];
 
-                new FormTaxpayer(taxpayer.id).Show();
+                new FormTaxpayer(taxpayer.id, canChange).Show();
 
                 Close();
                 Dispose();
@@ -44,7 +46,7 @@ namespace TaxAdministration.form.taxpayer
                     "@middlename", DBNull.Value,
                     "@lastname", DBNull.Value)[0];
 
-                new FormTaxpayer(taxpayer.id).Show();
+                new FormTaxpayer(taxpayer.id, canChange).Show();
 
                 Close();
                 Dispose();
@@ -59,7 +61,7 @@ namespace TaxAdministration.form.taxpayer
                     "@middlename", textBox4.Text,
                     "@lastname", textBox5.Text)[0];
 
-                new FormTaxpayer(taxpayer.id).Show();
+                new FormTaxpayer(taxpayer.id, canChange).Show();
 
                 Close();
                 Dispose();

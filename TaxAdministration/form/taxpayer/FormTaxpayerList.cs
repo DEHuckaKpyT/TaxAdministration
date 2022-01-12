@@ -13,9 +13,11 @@ namespace TaxAdministration.form
 {
     public partial class FormTaxpayerList : Form
     {
-        public FormTaxpayerList()
+        bool canChange;
+        public FormTaxpayerList(bool canChange)
         {
             InitializeComponent();
+            this.canChange = canChange;
         }
 
         private void FormTaxpayerList_Load(object sender, EventArgs e)
@@ -28,6 +30,7 @@ namespace TaxAdministration.form
                 UseColumnTextForButtonValue = true
             });
             dataGridView1.Columns[0].Visible = false;
+            button1.Enabled = canChange;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +43,7 @@ namespace TaxAdministration.form
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
                 V_Taxpayers taxpayer = (V_Taxpayers)grid.Rows[e.RowIndex].DataBoundItem;
-                new FormTaxpayer(taxpayer.id).ShowDialog();
+                new FormTaxpayer(taxpayer.id, canChange).ShowDialog();
                 dataGridView1.DataSource = Repository.Get<V_Taxpayers>($"select * from V_Taxpayers");
             }
         }

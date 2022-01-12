@@ -12,9 +12,11 @@ namespace TaxAdministration.form
 {
     public partial class FormSearchOrganization : Form
     {
-        public FormSearchOrganization()
+        bool canChange;
+        public FormSearchOrganization(bool canChange)
         {
             InitializeComponent();
+            this.canChange = canChange;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +28,7 @@ namespace TaxAdministration.form
                     "@name", DBNull.Value,
                     "@inn", DBNull.Value)[0];
 
-                new FormOrganization(organization.id).Show();
+                new FormOrganization(organization.id, canChange).Show();
 
                 Close();
                 Dispose();
@@ -39,7 +41,7 @@ namespace TaxAdministration.form
                     "@name", textBox2.Text,
                     "@inn", DBNull.Value)[0];
 
-                new FormOrganization(organization.id).Show();
+                new FormOrganization(organization.id, canChange).Show();
 
                 Close();
                 Dispose();
@@ -52,7 +54,7 @@ namespace TaxAdministration.form
                     "@name", DBNull.Value,
                     "@inn", textBox3.Text)[0];
 
-                new FormOrganization(organization.id).Show();
+                new FormOrganization(organization.id, canChange).Show();
 
                 Close();
                 Dispose();

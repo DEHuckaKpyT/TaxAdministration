@@ -13,9 +13,11 @@ namespace TaxAdministration.form
 {
     public partial class FormOrganizationList : Form
     {
-        public FormOrganizationList()
+        bool canChange;
+        public FormOrganizationList(bool canChange)
         {
             InitializeComponent();
+            this.canChange = canChange;
         }
 
         private void FormOrganizationList_Load(object sender, EventArgs e)
@@ -30,6 +32,8 @@ namespace TaxAdministration.form
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Width = 300;
             dataGridView1.Columns[3].Width = 150;
+
+            button1.Enabled = canChange;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,7 +46,7 @@ namespace TaxAdministration.form
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
                 V_Organizations organization = (V_Organizations)grid.Rows[e.RowIndex].DataBoundItem;
-                new FormOrganization(organization.id).ShowDialog();
+                new FormOrganization(organization.id, canChange).ShowDialog();
                 dataGridView1.DataSource = Repository.Get<V_Organizations>($"select * from V_Organizations");
             }
         }

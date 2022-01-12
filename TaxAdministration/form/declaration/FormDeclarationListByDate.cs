@@ -11,19 +11,26 @@ using TaxAdministration.model;
 
 namespace TaxAdministration.form.declaration
 {
-    public partial class FormNotAcceptedDeclarationList : Form
+    public partial class FormDeclarationListByDate : Form
     {
         bool canChange;
-        public FormNotAcceptedDeclarationList(bool canChange)
+        DateTime fromDate;
+        DateTime tillDate;
+        public FormDeclarationListByDate(DateTime fromDate, DateTime tillDate, bool canChange)
         {
             InitializeComponent();
+            this.fromDate = fromDate;
+            this.tillDate = tillDate;
             this.canChange = canChange;
         }
 
-        private void FormNotAcceptedDeclarationList_Load(object sender, EventArgs e)
+        private void FormDeclarationListByDate_Load(object sender, EventArgs e)
         {
-            //note V_NotAcceptedDeclarations
-            dataGridView1.DataSource = Repository.Get<V_Declarations>($"select * from V_NotAcceptedDeclarations");
+            //note SearchDeclaration
+            dataGridView1.DataSource = Repository.Exec<Declaration>("SearchDeclaration",
+                    "@number", DBNull.Value,
+                    "@fromDate", fromDate.ToString("yyyy-MM-dd"),
+                    "@tillDate", tillDate.ToString("yyyy-MM-dd"));
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
             {
                 Text = "Открыть",
@@ -41,9 +48,12 @@ namespace TaxAdministration.form.declaration
 
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
-                V_Declarations declaration = (V_Declarations)grid.Rows[e.RowIndex].DataBoundItem;
+                Declaration declaration = (Declaration)grid.Rows[e.RowIndex].DataBoundItem;
                 new FormDeclaration(declaration.id, canChange).ShowDialog();
-                dataGridView1.DataSource = Repository.Get<V_Declarations>($"select * from V_NotAcceptedDeclarations");
+                dataGridView1.DataSource = Repository.Exec<Declaration>("SearchDeclaration",
+                    "@number", DBNull.Value,
+                    "@fromDate", fromDate.ToString("yyyy-MM-dd"),
+                    "@tillDate", tillDate.ToString("yyyy-MM-dd"));
             }
         }
     }

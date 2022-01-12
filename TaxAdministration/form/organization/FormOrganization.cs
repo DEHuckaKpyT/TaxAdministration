@@ -14,10 +14,12 @@ namespace TaxAdministration.form
     public partial class FormOrganization : Form
     {
         int id;
-        public FormOrganization(int organizationId)
+        bool canChange;
+        public FormOrganization(int organizationId, bool canChange)
         {
             InitializeComponent();
             this.id = organizationId;
+            this.canChange = canChange;
         }
 
         private void FormOrganization_Load(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace TaxAdministration.form
                     if (st.id == street.id) comboBoxStreet.SelectedItem = st;
                 }
             }
+            button1.Enabled = canChange;
         }
 
         private void button1_Click(object sender, EventArgs e)

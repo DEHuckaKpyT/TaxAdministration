@@ -13,9 +13,11 @@ namespace TaxAdministration.form
 {
     public partial class FormDeclarationList : Form
     {
-        public FormDeclarationList()
+        bool canChange;
+        public FormDeclarationList(bool canChange)
         {
             InitializeComponent();
+            this.canChange = canChange;
         }
 
         private void FormDeclarationList_Load(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace TaxAdministration.form
             if (grid[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
             {
                 V_Declarations declaration = (V_Declarations)grid.Rows[e.RowIndex].DataBoundItem;
-                new FormDeclaration(declaration.id).ShowDialog();
+                new FormDeclaration(declaration.id, canChange).ShowDialog();
                 dataGridView1.DataSource = Repository.Get<V_Declarations>($"select * from V_Declarations");
             }
         }

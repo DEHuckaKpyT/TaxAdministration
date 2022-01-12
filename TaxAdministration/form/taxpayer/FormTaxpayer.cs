@@ -7,10 +7,12 @@ namespace TaxAdministration.form
     public partial class FormTaxpayer : Form
     {
         int id;
-        public FormTaxpayer(int id)
+        bool canChange;
+        public FormTaxpayer(int id, bool canChange)
         {
             InitializeComponent();
             this.id = id;
+            this.canChange = canChange;
         }
 
         private void FormTaxpayer_Load(object sender, EventArgs e)
@@ -62,6 +64,8 @@ namespace TaxAdministration.form
 
             textBoxTaxDistrict.Text = taxpayer.tax_district;
             textBoxTaxNumber.Text = taxpayer.tax_number;
+
+            button1.Enabled = canChange;
         }
 
         private void button1_Click(object sender, EventArgs e)

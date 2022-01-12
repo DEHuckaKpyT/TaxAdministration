@@ -40,25 +40,25 @@ namespace TaxAdministration.form
 
         private void ToolStripMenuItemUserList_Click(object sender, EventArgs e) => new FormUserList().Show();
 
-        private void ToolStripMenuItemDeclarationList_Click(object sender, EventArgs e) => new FormNotAcceptedDeclarationList().Show();
+        private void ToolStripMenuItemDeclarationList_Click(object sender, EventArgs e) => new FormNotAcceptedDeclarationList(canChange).Show();
 
-        private void улицыToolStripMenuItem_Click(object sender, EventArgs e) => new FormStreets().Show();
+        private void улицыToolStripMenuItem_Click(object sender, EventArgs e) => new FormStreets(canChange).Show();
 
-        private void районыToolStripMenuItem_Click(object sender, EventArgs e) => new FormDistricts().Show();
+        private void районыToolStripMenuItem_Click(object sender, EventArgs e) => new FormDistricts(canChange).Show();
 
-        private void льготыToolStripMenuItem_Click(object sender, EventArgs e) => new FormExempts().Show();
+        private void льготыToolStripMenuItem_Click(object sender, EventArgs e) => new FormExempts(canChange).Show();
 
-        private void списокОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormOrganizationList().Show();
+        private void списокОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormOrganizationList(canChange).Show();
 
-        private void поискОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchOrganization().Show();
+        private void поискОрганизацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchOrganization(canChange).Show();
 
-        private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e) => new FormTaxpayerList().Show();
+        private void списокНалогоплательщиковToolStripMenuItem_Click(object sender, EventArgs e) => new FormTaxpayerList(canChange).Show();
 
-        private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchTaxpayer().Show();
+        private void поискНалогоплательщикаToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchTaxpayer(canChange).Show();
 
-        private void поискДекларацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchDeclaration().Show();
+        private void всеДекларацииToolStripMenuItem_Click(object sender, EventArgs e) => new FormDeclarationList(canChange).Show();
 
-        private void всеДекларацииToolStripMenuItem_Click(object sender, EventArgs e) => new FormDeclarationList().Show();
+        private void поискДекларацийToolStripMenuItem_Click(object sender, EventArgs e) => new FormSearchDeclaration(canChange).Show();
 
         private void toolStripButtonLog_Click(object sender, EventArgs e) => new FormLog().Show();
     }
