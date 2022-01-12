@@ -23,6 +23,7 @@ namespace TaxAdministration.form
         {
             if (textBox1.Text != "")
             {
+                //note SearchOrganization
                 Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", textBox1.Text,
                     "@name", DBNull.Value,
@@ -36,6 +37,7 @@ namespace TaxAdministration.form
             }
             if (textBox2.Text != "")
             {
+                //note SearchOrganization
                 Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", DBNull.Value,
                     "@name", textBox2.Text,
@@ -49,6 +51,7 @@ namespace TaxAdministration.form
             }
             if (textBox3.Text != "")
             {
+                //note SearchOrganization
                 Organization organization = Repository.Exec<Organization>("SearchOrganization",
                     "@id", DBNull.Value,
                     "@name", DBNull.Value,

@@ -24,6 +24,7 @@ namespace TaxAdministration.form.taxpayer
         {
             if (textBox1.Text != "")
             {
+                //note SearchTaxpayer
                 Taxpayer taxpayer = Repository.Exec<Taxpayer>("SearchTaxpayer",
                     "@id", textBox1.Text,
                     "@inn", DBNull.Value,
@@ -39,6 +40,7 @@ namespace TaxAdministration.form.taxpayer
             }
             if (textBox2.Text != "")
             {
+                //note SearchTaxpayer
                 Taxpayer taxpayer = Repository.Exec<Taxpayer>("SearchTaxpayer",
                     "@id", DBNull.Value,
                     "@inn", textBox2.Text,
@@ -54,6 +56,7 @@ namespace TaxAdministration.form.taxpayer
             }
             if (textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
+                //note SearchTaxpayer
                 Taxpayer taxpayer = Repository.Exec<Taxpayer>("SearchTaxpayer",
                     "@id", DBNull.Value,
                     "@inn", DBNull.Value,
